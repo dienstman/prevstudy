@@ -128,7 +128,7 @@
                 <div class="flex flex-col gap-1 flex-grow">
                     <label class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Filtrar Tópico</label>
                     <select id="filter-topic" onchange="applyFilters()" class="bg-slate-900 border border-slate-850 text-slate-100 text-xs font-semibold py-2 px-3 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none w-full">
-                        <option value="all">📚 Todos os Tópicos (Completo - 164 Q)</option>
+                        <option value="all">📚 Todos os Tópicos (Completo - 180 Q)</option>
                         <option value="Princípios e Finalidade">🎯 Princípios e Finalidade</option>
                         <option value="Conselho Nacional (CNPS)">🏛️ Conselho Nacional (CNPS)</option>
                         <option value="Segurados Obrigatórios">👤 Segurados Obrigatórios</option>
@@ -137,6 +137,7 @@
                         <option value="Dependentes">👥 Dependentes</option>
                         <option value="Inscrições">✍️ Inscrições</option>
                         <option value="Regulamento (Dec. 3048)">📜 Regulamento (Dec. 3048)</option>
+                        <option value="BPC / LOAS">🤝 BPC / LOAS</option>
                     </select>
                 </div>
                 <div class="flex flex-col gap-1 md:w-48">
@@ -225,6 +226,7 @@
                         <option value="Dependentes">Dependentes</option>
                         <option value="Inscrições">Inscrições</option>
                         <option value="Regulamento (Dec. 3048)">Regulamento (Dec. 3048)</option>
+                        <option value="BPC / LOAS">BPC / LOAS</option>
                     </select>
                 </div>
 
@@ -278,7 +280,7 @@
     <!-- Footer -->
     <footer class="bg-slate-950 p-4 border-t border-slate-900 text-center text-xs text-slate-500">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <span>PrevStudy Pro © 2026 • 164 Questões atualizadas (Lei 8.213/91 + Dec 3048/99)</span>
+            <span>PrevStudy Pro © 2026 • 180 Questões atualizadas (Lei 8.213/91 + Dec 3048/99 + LOAS)</span>
             <span class="text-[10px] text-slate-600 font-mono">Construído em conformidade estrita com o Regulamento Geral</span>
         </div>
     </footer>
@@ -1818,6 +1820,142 @@ function toggleMute() {
                 a: true,
                 explanation: "Correto. O salário-maternidade é o único benefício por incapacidade sobre o qual incide regularmente a contribuição previdenciária, conforme entendimento consolidado do STF e do Decreto 3048.",
                 full: "Decreto 3048/99, Art. 214, § 2º: Considera-se salário-de-contribuição [...] o salário-maternidade, para fins de incidência das contribuições do segurado..."
+            },
+            // --- INÍCIO: QUESTÕES DA LEI ORGÂNICA DA ASSISTÊNCIA SOCIAL (LOAS) - BPC ---
+            {
+                id: 166,
+                topic: "BPC / LOAS",
+                difficulty: "Fácil",
+                q: "O benefício de prestação continuada (BPC) é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 60 anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família.",
+                a: false,
+                explanation: "Incorreto. A idade mínima exigida pela LOAS para que o idoso tenha direito ao BPC é de 65 (sessenta e cinco) anos, e não 60 anos.",
+                full: "Lei 8.742/93, Art. 20, caput: O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família."
+            },
+            {
+                id: 167,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "Para fins de apuração da renda per capita do BPC, o conceito de família restringe-se exclusivamente ao requerente, seu cônjuge ou companheiro e seus filhos solteiros, sendo vedada a inclusão dos pais do requerente.",
+                a: false,
+                explanation: "Incorreto. A LOAS define família, para o BPC, de forma mais ampla, incluindo expressamente os pais, padrastos, irmãos solteiros e menores tutelados, desde que vivam sob o mesmo teto.",
+                full: "Lei 8.742/93, Art. 20, § 1º: Para os efeitos do disposto no caput, a família é composta pelo requerente, o cônjuge ou companheiro, os pais e, na ausência de um deles, a madrasta ou o padrasto, os irmãos solteiros, os filhos e enteados solteiros e os menores tutelados, desde que vivam sob o mesmo teto."
+            },
+            {
+                id: 168,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "Considera-se pessoa com deficiência, para fins de BPC, aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.",
+                a: true,
+                explanation: "Correto. Trata-se da definição legal exata trazida pela LOAS e em harmonia com o Estatuto da Pessoa com Deficiência.",
+                full: "Lei 8.742/93, Art. 20, § 2º: Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial..."
+            },
+            {
+                id: 169,
+                topic: "BPC / LOAS",
+                difficulty: "Difícil",
+                q: "Para efeitos de concessão do BPC, considera-se incapaz de prover a manutenção da pessoa com deficiência ou idosa a família cuja renda mensal per capita seja igual ou inferior a 1/2 (meio) salário-mínimo.",
+                a: false,
+                explanation: "Incorreto. A regra geral da lei estabelece o limite da renda familiar per capita como sendo igual ou inferior a 1/4 (um quarto) do salário-mínimo, havendo ressalvas judiciais ou casos excepcionais estritos para ampliação.",
+                full: "Lei 8.742/93, Art. 20, § 3º: Considera-se incapaz de prover a manutenção da pessoa com deficiência ou idosa a família cuja renda mensal per capita seja igual ou inferior a 1/4 (um quarto) do salário-mínimo."
+            },
+            {
+                id: 170,
+                topic: "BPC / LOAS",
+                difficulty: "Fácil",
+                q: "O Benefício de Prestação Continuada (BPC) pode ser acumulado livremente com o seguro-desemprego, desde que a soma de ambos os benefícios não ultrapasse dois salários mínimos mensais.",
+                a: false,
+                explanation: "Incorreto. O BPC é, em regra, inacumulável com qualquer outro benefício da seguridade social ou regime diverso, salvo pensões especiais indenizatórias ou assistência médica.",
+                full: "Lei 8.742/93, Art. 20, § 4º: O benefício de que trata este artigo não pode ser acumulado pelo beneficiário com qualquer outro no âmbito da seguridade social ou de outro regime, salvo os da assistência médica e da pensão especial de natureza indenizatória."
+            },
+            {
+                id: 171,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "Os rendimentos decorrentes de contrato de aprendizagem ou estágio supervisionado auferidos pelo requerente do BPC ou membro de sua família não serão computados para fins de cálculo da renda familiar per capita.",
+                a: true,
+                explanation: "Correto. A lei visa estimular a integração ao mercado de trabalho e o estudo, blindando esses rendimentos da composição da renda per capita para o BPC.",
+                full: "Lei 8.742/93, Art. 20, § 9º: Os rendimentos decorrentes de estágio supervisionado e de aprendizagem não serão computados para os fins de cálculo da renda familiar per capita..."
+            },
+            {
+                id: 172,
+                topic: "BPC / LOAS",
+                difficulty: "Difícil",
+                q: "Para fins de concessão do BPC, considera-se impedimento de longo prazo aquele que produza efeitos na pessoa com deficiência pelo prazo mínimo ininterrupto de 2 (dois) anos.",
+                a: true,
+                explanation: "Correto. O marco temporal que caracteriza a longa duração da deficiência ou impedimento na LOAS é de, no mínimo, 2 anos.",
+                full: "Lei 8.742/93, Art. 20, § 10: Considera-se impedimento de longo prazo, para os fins do § 2º deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos."
+            },
+            {
+                id: 173,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "O Benefício de Prestação Continuada (BPC) deverá ser revisto a cada 2 (dois) anos, para fins de avaliação da continuidade das condições que lhe deram origem.",
+                a: true,
+                explanation: "Correto. O BPC não tem caráter vitalício e definitivo, sujeitando-se à revisão bienal para atestar a continuidade do quadro de pobreza e impedimento.",
+                full: "Lei 8.742/93, Art. 21: O benefício de prestação continuada deve ser revisto a cada 2 (dois) anos para avaliação da continuidade das condições que lhe deram origem."
+            },
+            {
+                id: 174,
+                topic: "BPC / LOAS",
+                difficulty: "Fácil",
+                q: "Ocorrendo o falecimento do beneficiário do BPC, o pagamento do benefício será imediatamente convertido em pensão por morte a ser paga aos seus dependentes legais do grupo familiar.",
+                a: false,
+                explanation: "Incorreto. O BPC é um benefício assistencial de natureza personalíssima e intransferível. Ele não gera direito à pensão por morte para os familiares sobreviventes.",
+                full: "Lei 8.742/93, Art. 21, § 1º: O pagamento do benefício cessa no momento em que forem superadas as condições referidas no caput, ou em caso de morte do beneficiário."
+            },
+            {
+                id: 175,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "O Benefício de Prestação Continuada será suspenso pelo órgão concedente quando a pessoa com deficiência passar a exercer atividade remunerada na qualidade de microempreendedor individual (MEI).",
+                a: true,
+                explanation: "Correto. O exercício de atividade remunerada formal (seja CTPS, autônomo ou MEI) suspende o BPC, pois pressupõe-se que o beneficiário passa a prover o próprio sustento temporariamente.",
+                full: "Lei 8.742/93, Art. 21-A, caput: O benefício de prestação continuada será suspenso pelo órgão concedente quando a pessoa com deficiência exercer atividade remunerada, inclusive na condição de microempreendedor individual."
+            },
+            {
+                id: 176,
+                topic: "BPC / LOAS",
+                difficulty: "Difícil",
+                q: "Caso o beneficiário do BPC com deficiência perca seu emprego ou encerre suas atividades como microempreendedor individual, o benefício só poderá ser restabelecido se ele passar novamente por toda a avaliação médica e social pericial.",
+                a: false,
+                explanation: "Incorreto. A lei determina o restabelecimento do benefício sem a necessidade de nova avaliação médica e social, de forma a garantir a segurança da pessoa com deficiência em tentar ingressar no mercado de trabalho.",
+                full: "Lei 8.742/93, Art. 21-A, § 1º: Extinta a relação trabalhista ou a atividade empreendedora [...], o benefício será restabelecido de pleno direito, independentemente de nova avaliação médica e social..."
+            },
+            {
+                id: 177,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "A avaliação da deficiência para o BPC restringe-se exclusivamente aos exames médicos e laboratoriais que atestam as condições anatômicas e biológicas do requerente.",
+                a: false,
+                explanation: "Incorreto. A avaliação não é puramente médica; ela é um processo biopsicossocial, devendo considerar também os fatores ambientais, sociais, pessoais e psicológicos que obstruem a participação plena na sociedade.",
+                full: "Lei 8.742/93, Art. 20-B, § 1º: Na avaliação da deficiência e do grau de incapacidade, [...] serão considerados: I - os fatores ambientais, sociais e pessoais; II - a avaliação médica e III - a avaliação social."
+            },
+            {
+                id: 178,
+                topic: "BPC / LOAS",
+                difficulty: "Difícil",
+                q: "O valor recebido a título de auxílio-inclusão, pago à pessoa com deficiência que ingressa no mercado de trabalho, não será somado à renda familiar para fins de verificação do direito ao BPC dos demais membros da família.",
+                a: true,
+                explanation: "Correto. Trata-se de garantia legal que visa proteger o núcleo familiar. A conquista do emprego e do auxílio-inclusão por um membro não desampara automaticamente a renda calculada para os outros membros da família.",
+                full: "Lei 8.742/93, Art. 20, § 14: O auxílio-inclusão de que trata o art. 26-B não será computado para fins de cálculo da renda familiar per capita de que trata o § 3º deste artigo."
+            },
+            {
+                id: 179,
+                topic: "BPC / LOAS",
+                difficulty: "Média",
+                q: "Os valores do Benefício de Prestação Continuada (BPC) que o idoso ou pessoa com deficiência falecido já tinha direito de receber em vida, mas que não foram sacados, reverterão aos cofres da União e não poderão ser repassados aos herdeiros.",
+                a: false,
+                explanation: "Incorreto. Os resíduos de benefícios assistenciais já devidos em vida, mas que por ventura não tenham sido recebidos pelo beneficiário antes de falecer, configuram patrimônio devido e devem ser repassados aos herdeiros ou sucessores.",
+                full: "Lei 8.742/93, Art. 21, § 2º: O valor do benefício de prestação continuada não pago em vida ao beneficiário falecido será pago aos seus herdeiros ou sucessores, na forma da lei civil."
+            },
+            {
+                id: 180,
+                topic: "BPC / LOAS",
+                difficulty: "Difícil",
+                q: "Para o cálculo da renda familiar per capita exigida para o BPC, deverá ser excluído do cálculo o valor equivalente a um BPC ou a uma aposentadoria no valor de até um salário mínimo já recebido por outro idoso do mesmo grupo familiar.",
+                a: true,
+                explanation: "Correto. Esse é um entendimento de grande relevância materializado na legislação. Ele garante que a presença de um idoso (ou deficiente) amparado no valor de um salário mínimo não eleve a renda a ponto de barrar o direito ao BPC para um segundo necessitado da casa.",
+                full: "Estatuto do Idoso c/c entendimento jurisprudencial para o BPC (e Lei 8.742, regulamentações): O benefício já concedido a qualquer membro da família nos termos do caput não será computado para os fins do cálculo da renda familiar per capita a que se refere a LOAS."
             }
         ];
 
